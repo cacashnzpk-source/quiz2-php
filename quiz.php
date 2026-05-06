@@ -87,6 +87,34 @@
     </table>
 </div>
 
+<script>
+document.getElementById("formBarang").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    // Ambil data dari input
+    let kode = document.getElementById("kode").value;
+    let nama = document.getElementById("nama").value;
+    let jumlah = document.getElementById("jumlah").value;
+    let harga = document.getElementById("harga").value;
+
+    // Ambil tabel
+    let tabel = document.getElementById("tabelBarang");
+
+    // Tambah baris baru
+    let row = tabel.insertRow();
+
+    row.insertCell(0).innerText = kode;
+    row.insertCell(1).innerText = nama;
+    row.insertCell(2).innerText = jumlah;
+    row.insertCell(3).innerText = harga;
+
+    // Reset form
+    document.getElementById("formBarang").reset();
+});
+</script>
+
+</body>
+</html>
 });
 </script>
 
